@@ -1,1 +1,1 @@
-# zahranychnyi-hw-2
+# SZAHRANYCHNY-SZAHRANYCHNY-goit-markup-hw-02
