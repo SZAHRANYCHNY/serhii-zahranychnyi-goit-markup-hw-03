@@ -74,8 +74,6 @@ button {
   padding-right: 15px;
 
   margin: 0 auto;
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 .section {
   padding-bottom: 120px;
@@ -139,6 +137,9 @@ button {
 .phone-call {
   color: var(--text-cl);
   font-weight: 400;
+}
+.heder {
+  border-bottom: 1px solid var(--accent-cl);
 }
 .hero {
   background-color: var(--dark-cl);
@@ -207,8 +208,13 @@ button {
   color: var(--dark-cl);
   display: flex;
   justify-content: center;
-  padding-bottom: 73px;
+  padding-bottom: 72px;
 }
+.container-title {
+  padding-top: 121.43px;
+  padding-bottom: 72.86px;
+}
+
 .images-row {
   display: flex;
   flex-wrap: wrap;
@@ -221,9 +227,17 @@ button {
   background-color: var(--light-cl);
 }
 .benefits-team {
-  padding: 0px 16px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
   padding-bottom: 34.27px;
   padding-top: 32px;
+  background-color: var(--white-cl);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .name {
@@ -246,13 +260,14 @@ button {
 .portfolio-btn {
   font-family: inherit;
   color: var(--primary-brand-cl);
-  border-color: var(--accent-cl);
+
   font-weight: 500;
   font-size: 16px;
   line-height: calc(24 / 16);
   letter-spacing: 0.04em;
   border: 1px solid var(--accent-cl);
   border-radius: 4px;
+  padding: 11px 23px;
 }
 .portfolio-btn-row {
   display: flex;
@@ -287,7 +302,6 @@ button {
 .footer-container {
   padding-top: 100px;
   padding-bottom: 100px;
-  padding-left: 156px;
 }
 .footer-part-logo {
   font-family: var(--logo-font);
