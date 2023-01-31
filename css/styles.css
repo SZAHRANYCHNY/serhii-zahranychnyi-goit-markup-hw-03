@@ -36,13 +36,66 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button {
+  cursor: pointer;
+}
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
 .link {
   text-decoration: none;
 }
+.container {
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
 
+  margin: 0 auto;
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+.section {
+  padding-bottom: 120px;
+}
+
+.section-top {
+  padding-top: 120px;
+}
+.page-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.page-header-container {
+  display: flex;
+  align-items: center;
+}
+.nav-row {
+  display: flex;
+  align-items: center;
+}
 .top-logo {
   color: var(--primary-brand-cl);
   font-family: var(--logo-font);
@@ -53,22 +106,39 @@ body {
 }
 .top-part-logo {
   color: var(--dark-cl);
+  margin-right: 76px;
+}
+.menu-row {
+  display: flex;
+  align-items: center;
+}
+.menu:not(:last-child) {
+  margin-right: 40px;
+}
+
+.menu-link {
+  font-weight: 500;
+  color: var(--dark-cl);
 }
 .menu-link:hover,
 .menu-link:focus {
   color: var(--pressed-state-cl);
 }
 
-.menu {
-  font-weight: 500;
-  color: var(--dark-cl);
+.adress-row {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .mail {
   color: var(--text-cl);
+  font-weight: 400;
+  margin-right: 40px;
 }
 .phone-call {
   color: var(--text-cl);
+  font-weight: 400;
 }
 .hero {
   background-color: var(--dark-cl);
@@ -78,20 +148,46 @@ body {
   font-size: 56px;
   line-height: calc(60 / 56);
   color: var(--white-cl);
+  width: 494px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 188px;
+  padding-bottom: 48px;
 }
+.btn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 188px;
+  border-radius: 4px;
+}
+
 .hero-btn {
-  font-family: inherit;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+
   color: var(--white-cl);
   background-color: var(--primary-brand-cl);
   font-weight: 500;
   font-size: 16px;
   line-height: calc(24 / 16);
   letter-spacing: 0.04em;
-  cursor: pointer;
 }
+
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--pressed-state-cl);
+}
+.section-text {
+  width: 264px;
+}
+.benefits-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }
 
 .benefits {
@@ -100,17 +196,34 @@ body {
   line-height: calc(24 / 20);
   color: var(--dark-cl);
 }
-.text {
-  color: var(--text-cl);
+
+.hero {
 }
-.title {
+
+.secondary-title {
   font-weight: 700;
   font-size: 36px;
   line-height: calc(40 / 36);
   color: var(--dark-cl);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 73px;
 }
+.images-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  column-gap: 24px;
+  row-gap: 40px;
+}
+
 .team {
   background-color: var(--light-cl);
+}
+.benefits-team {
+  padding: 0px 16px;
+  padding-bottom: 34.27px;
+  padding-top: 32px;
 }
 
 .name {
@@ -118,18 +231,11 @@ body {
   font-size: 20px;
   line-height: calc(24 / 20);
   color: var(--dark-cl);
+  margin-bottom: 8px;
 }
 
 .dark {
   background-color: var(--dark-cl);
-}
-.footer-part-logo {
-  font-family: var(--logo-font);
-  font-weight: 800;
-  font-size: 18px;
-  line-height: calc(21 / 18);
-  letter-spacing: 0.03em;
-  color: var(--primary-brand-cl);
 }
 
 .white-part-logo {
@@ -140,29 +246,59 @@ body {
 .portfolio-btn {
   font-family: inherit;
   color: var(--primary-brand-cl);
-  background-color: var(--light-cl);
+  border-color: var(--accent-cl);
   font-weight: 500;
   font-size: 16px;
   line-height: calc(24 / 16);
   letter-spacing: 0.04em;
+  border: 1px solid var(--accent-cl);
+  border-radius: 4px;
+}
+.portfolio-btn-row {
   display: flex;
-  align-items: center;
-  text-align: center;
-  cursor: pointer;
-  border: none;
+  justify-content: center;
+  gap: 24px;
+
+  padding-bottom: 72px;
+  padding-top: 96px;
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   color: var(--white-cl);
   background-color: var(--pressed-state-cl);
 }
+.portfolio-images-row {
+}
+
 .caption {
   font-weight: 500;
   font-size: 20px;
   line-height: calc(24 / 20);
   color: var(--text-cl);
+  padding-left: 16px;
+  margin-top: 32px;
+}
+.text {
+  color: var(--text-cl);
+  padding-left: 16px;
+  padding-top: 8px;
+  margin-bottom: 32px;
+}
+.footer-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 156px;
+}
+.footer-part-logo {
+  font-family: var(--logo-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: calc(21 / 18);
+  letter-spacing: 0.03em;
+  color: var(--primary-brand-cl);
 }
 
 .footer-desk {
   color: var(--accent-cl);
+  margin-top: 16px;
 }
